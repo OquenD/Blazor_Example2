@@ -49,8 +49,8 @@ mejorTiempo.Add("Redbull", circuitoRedBull.Mostrar_Mejor_Tiempo());
 circuitoRedBull.SacarMonoplaza();
 
 
-int i=0;
-while(i<numVueltas){
-    if(mejorTiempo)
-
-}
+foreach (KeyValuePair<string, float> pos in mejorTiempo.OrderBy(key => key.Value))  
+    {  
+        Console.WriteLine("Resultados");
+        Console.WriteLine("Key: {0}, Value: {1}", pos.Key, pos.Value);  
+    }  
