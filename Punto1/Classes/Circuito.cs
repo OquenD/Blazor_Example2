@@ -5,12 +5,12 @@ public class Circuito{
 
     private IMonoplazaInterface Mono;
 
-
-    public string nombre="";
+    public string nombre ="";
     protected bool monoPresente;
     protected Random random;
     protected int vueltas;
-    protected int []tiempo;
+    public float tiempo;
+    public float max=0;
     
     protected int i=0;
 
@@ -52,18 +52,31 @@ public class Circuito{
     //Esta acción es donde el monoplaza dará N cantidades de vueltas al circuito, 
     // La forma de calcular el tiempo será en un número aleatorio de 6 cifras, 
     // en cada vuelta se debe imprimir el tiempo de vuelta y al final se entregará el mejor tiempo.
-    public string Realizarprueba(int vueltas){
+    public string Realizarprueba(int vueltas,string nombre){
         if(Evaluar())
         {  
+            Mono.Encender();
+            Mono.Mover();
             while (i>vueltas)
-             tiempo[i] = random.Next(1000000, 999999);
+             Console.WriteLine($"Vuelta {i+1} del equipo {nombre}");
+             tiempo =random.Next(1000000, 999999);
+             Console.WriteLine(tiempo);
+             if(tiempo>max){max=tiempo;}
              i++;
             
+            Mono.Detener();
+            Mono.Apagar();
             return"Prueba Finalizada";
+
         }
         return "El mono plaza no se encuentra en el circuito";
     }
 
+    public float Mostrar_Mejor_Tiempo(){
 
+        return max;
+    }
+
+    
 
 }
