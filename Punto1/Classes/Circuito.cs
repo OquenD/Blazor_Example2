@@ -56,9 +56,10 @@ public class Circuito{
         if(Evaluar())
         {  
             while (i>vueltas)
-             tiempo[i] = random.Next(1, 1000000);
+             tiempo[i] = random.Next(1000000, 999999);
              i++;
-             return"Prueba Finalizada";
+            
+            return"Prueba Finalizada";
         }
         return "El mono plaza no se encuentra en el circuito";
     }
