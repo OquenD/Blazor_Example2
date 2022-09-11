@@ -7,20 +7,16 @@ public class Circuito{
 
     public string nombre ="";
     protected bool monoPresente;
-    protected Random random;
     protected int vueltas;
-    public float tiempo;
-    public float max=0;
+    public int tiempo;
+    public int max=0;
     
-    protected int i=0;
+    
 
     public Circuito(IMonoplazaInterface M){
         Mono = M;
     }
-     public Circuito(){
-        random = new Random();
-    }
-
+   
     public bool Evaluar(){
         if (monoPresente)
         {
@@ -52,27 +48,32 @@ public class Circuito{
     //Esta acción es donde el monoplaza dará N cantidades de vueltas al circuito, 
     // La forma de calcular el tiempo será en un número aleatorio de 6 cifras, 
     // en cada vuelta se debe imprimir el tiempo de vuelta y al final se entregará el mejor tiempo.
-    public string Realizarprueba(int vueltas,string nombre){
+    public int Realizarprueba(int vueltas,string nombre){
+        
         if(Evaluar())
         {  
+            int i=0;
             Mono.Encender();
             Mono.Mover();
-            while (i>vueltas)
-             Console.WriteLine($"Vuelta {i+1} del equipo {nombre}");
-             tiempo =random.Next(1000000, 999999);
-             Console.WriteLine(tiempo);
+            while (i<vueltas){            
+                Console.WriteLine($"Vuelta {i+1} del equipo {nombre}");
+                Mono.Lanzar();
+                tiempo =Mono.MostrarNumero();
+                Console.WriteLine(tiempo);
              if(tiempo>max){max=tiempo;}
-             i++;
-            
+            i++;
+            }
             Mono.Detener();
             Mono.Apagar();
-            return"Prueba Finalizada";
+            // return"Prueba Finalizada";
+            return Mono.MostrarNumero();
 
         }
-        return "El mono plaza no se encuentra en el circuito";
+        // return "El mono plaza no se encuentra en el circuito";
+        return 1;
     }
 
-    public float Mostrar_Mejor_Tiempo(){
+    public int Mostrar_Mejor_Tiempo(){
 
         return max;
     }

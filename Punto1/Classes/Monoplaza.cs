@@ -7,6 +7,13 @@ public abstract class Monoplaza : IMonoplazaInterface {
     public string scuderia="";
     protected bool movimiento;
     protected bool encendido;
+    protected Random random;
+     protected int valor;
+
+    public Monoplaza(){
+        random = new Random();
+    }
+
  
 
    
@@ -65,6 +72,16 @@ public abstract class Monoplaza : IMonoplazaInterface {
 
     }
 
-    
+    public void Lanzar(){
+        valor = random.Next(100000, 9999999); 
+
+    }
+
+    public int MostrarNumero(){
+
+        return valor;
+
+    }
+
 
 }

@@ -26,15 +26,20 @@ Console.WriteLine("Ingrese el numero de vueltas");
 int numVueltas = int.Parse(Console.ReadLine());
 
 
+
 Dictionary<string, float> mejorTiempo = new Dictionary<string, float>();
 
 //Acciones de Ferrari
 circuitoFerrari.AgregarMonoplaza();
-circuitoFerrari.Realizarprueba(numVueltas,MonoFerrari.scuderia);
+Console.WriteLine(circuitoFerrari.Realizarprueba(numVueltas,MonoFerrari.scuderia));
 mejorTiempo.Add("Ferrari", circuitoFerrari.Mostrar_Mejor_Tiempo());
 circuitoFerrari.SacarMonoplaza();
 
+// Console.WriteLine(circuitoFerrari.Mostrar_Mejor_Tiempo());
 
+
+
+/*
 //Acciones de Mclaren
 circuitoMclaren.AgregarMonoplaza();
 circuitoMclaren.Realizarprueba(numVueltas,MonoMclaren.scuderia);
@@ -53,4 +58,4 @@ foreach (KeyValuePair<string, float> pos in mejorTiempo.OrderBy(key => key.Value
     {  
         Console.WriteLine("Resultados");
         Console.WriteLine("Key: {0}, Value: {1}", pos.Key, pos.Value);  
-    }  
+    } */
