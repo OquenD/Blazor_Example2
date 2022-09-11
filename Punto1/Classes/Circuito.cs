@@ -57,7 +57,7 @@ public class Circuito{
             Mono.Encender();
             Mono.Mover();
             while (i<vueltas){            
-                Console.WriteLine($"Vuelta {i+1} del equipo {nombre}");
+                Console.WriteLine($"\nTiempo de la Vuelta {i+1} del equipo {nombre}");
                 Mono.Lanzar();
                 tiempo =Mono.MostrarNumero();
                 Console.WriteLine(tiempo);
@@ -66,11 +66,11 @@ public class Circuito{
             }
             Mono.Detener();
             Mono.Apagar();
-            return"Prueba Finalizada";
+            return"\n-----PRUEBA FINALIZADA-----\n";
            
 
         }
-        return "El mono plaza no se encuentra en el circuito";
+        return "El mono plaza no se encuentra en el circuito \n";
         
     }
 

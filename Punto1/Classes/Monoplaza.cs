@@ -21,10 +21,10 @@ public abstract class Monoplaza : IMonoplazaInterface {
     //Y además debe mostrar un mensaje indicando que está encendido.
     public bool Encender(){
         if(encendido && movimiento){
-            Console.WriteLine("Vehiculo ya esta encendido");
+            Console.WriteLine("Vehiculo ya esta encendido \n");
             return true;
         }
-          Console.WriteLine("Vehiculo encendido");
+          Console.WriteLine("Vehiculo encendido!");
           encendido=true;
           return false;
        
@@ -35,11 +35,11 @@ public abstract class Monoplaza : IMonoplazaInterface {
     // Y además debe mostrar un mensaje indicando que está apagado.
     public bool Apagar(){
           if(encendido && movimiento==false){
-            Console.WriteLine("Apagando vehiculo");
+            Console.WriteLine("Apagando vehiculo!");
             encendido = false;
             return true;
         }
-        Console.WriteLine("Detenga el vehiculo para apagar!");
+        Console.WriteLine("Detenga el vehiculo para apagar! \n");
         return false;
 
     }
@@ -49,11 +49,11 @@ public abstract class Monoplaza : IMonoplazaInterface {
     //Y además debe mostrar un mensaje indicando que está detenido.
     public bool Detener(){
           if(encendido && movimiento){
-            Console.WriteLine("Deteniendo Vehiculo");
+            Console.WriteLine("\nDeteniendo Vehiculo");
             movimiento = false;
             return true;
         }
-       Console.WriteLine("El vehiculo no esta en movimiento");
+       Console.WriteLine("El vehiculo no esta en movimiento \n");
        return false;
 
     }
@@ -67,7 +67,7 @@ public abstract class Monoplaza : IMonoplazaInterface {
             movimiento=true;
             return true;
         }
-        Console.WriteLine("vehiculo ya esta en movimiento");
+        Console.WriteLine("vehiculo ya esta en movimiento\n");
         return false;
 
     }

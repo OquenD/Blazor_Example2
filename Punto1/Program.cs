@@ -30,16 +30,15 @@ int numVueltas = int.Parse(Console.ReadLine());
 Dictionary<string, float> mejorTiempo = new Dictionary<string, float>();
 
 //Acciones de Ferrari
+Console.WriteLine("-----PRUEBA DE FERRARI-----");
 circuitoFerrari.AgregarMonoplaza();
 Console.WriteLine(circuitoFerrari.Realizarprueba(numVueltas,MonoFerrari.scuderia));
 mejorTiempo.Add("Ferrari", circuitoFerrari.Mostrar_Mejor_Tiempo());
 circuitoFerrari.SacarMonoplaza();
 
-// Console.WriteLine(circuitoFerrari.Mostrar_Mejor_Tiempo());
-
-
 
 //Acciones de Mclaren
+Console.WriteLine("-----PRUEBA DE MCLAREN-----");
 circuitoMclaren.AgregarMonoplaza();
 Console.WriteLine(circuitoMclaren.Realizarprueba(numVueltas,MonoMclaren.scuderia));
 mejorTiempo.Add("Mclaren", circuitoMclaren.Mostrar_Mejor_Tiempo());
@@ -48,6 +47,7 @@ circuitoMclaren.SacarMonoplaza();
 
 
 //Acciones de Redbull
+Console.WriteLine("-----PRUEBA DE REDBULL-----");
 circuitoRedBull.AgregarMonoplaza();
 Console.WriteLine(circuitoRedBull.Realizarprueba(numVueltas, MonoRedBull.scuderia));
 mejorTiempo.Add("Redbull", circuitoRedBull.Mostrar_Mejor_Tiempo());
@@ -55,7 +55,7 @@ circuitoRedBull.SacarMonoplaza();
 
 
 Console.WriteLine($"Resultados del Circuito {circuitoFerrari.nombre} \n");
-Console.WriteLine($"Tabla de posiciones menor a mayor tiempo {circuitoFerrari.nombre} \n");
+Console.WriteLine($"Tabla de posiciones menor a mayor tiempo \n");
 
 
 foreach (KeyValuePair<string, float> pos in mejorTiempo.OrderBy(key => key.Value))  
