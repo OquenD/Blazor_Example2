@@ -39,23 +39,26 @@ circuitoFerrari.SacarMonoplaza();
 
 
 
-/*
 //Acciones de Mclaren
 circuitoMclaren.AgregarMonoplaza();
-circuitoMclaren.Realizarprueba(numVueltas,MonoMclaren.scuderia);
+Console.WriteLine(circuitoMclaren.Realizarprueba(numVueltas,MonoMclaren.scuderia));
 mejorTiempo.Add("Mclaren", circuitoMclaren.Mostrar_Mejor_Tiempo());
 circuitoMclaren.SacarMonoplaza();
 
 
+
 //Acciones de Redbull
 circuitoRedBull.AgregarMonoplaza();
-circuitoRedBull.Realizarprueba(numVueltas, MonoRedBull.scuderia);
+Console.WriteLine(circuitoRedBull.Realizarprueba(numVueltas, MonoRedBull.scuderia));
 mejorTiempo.Add("Redbull", circuitoRedBull.Mostrar_Mejor_Tiempo());
 circuitoRedBull.SacarMonoplaza();
 
 
+Console.WriteLine($"Resultados del Circuito {circuitoFerrari.nombre} \n");
+Console.WriteLine($"Tabla de posiciones menor a mayor tiempo {circuitoFerrari.nombre} \n");
+
+
 foreach (KeyValuePair<string, float> pos in mejorTiempo.OrderBy(key => key.Value))  
-    {  
-        Console.WriteLine("Resultados");
-        Console.WriteLine("Key: {0}, Value: {1}", pos.Key, pos.Value);  
-    } */
+    {          
+        Console.WriteLine("Equipo: {0}, Tiempo: {1}", pos.Key, pos.Value);  
+    } 
