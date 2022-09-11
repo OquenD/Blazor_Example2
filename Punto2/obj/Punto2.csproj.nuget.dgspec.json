@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\TdeA\\SEMESTRE 5\\Construccion\\EntregableII\\EntregableII\\Punto2\\Punto2.csproj": {}
+    "D:\\Documents\\TdeA\\SEMESTRE 5\\Construccion\\Entregable2\\Punto2\\Punto2.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\TdeA\\SEMESTRE 5\\Construccion\\EntregableII\\EntregableII\\Punto2\\Punto2.csproj": {
+    "D:\\Documents\\TdeA\\SEMESTRE 5\\Construccion\\Entregable2\\Punto2\\Punto2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\TdeA\\SEMESTRE 5\\Construccion\\EntregableII\\EntregableII\\Punto2\\Punto2.csproj",
+        "projectUniqueName": "D:\\Documents\\TdeA\\SEMESTRE 5\\Construccion\\Entregable2\\Punto2\\Punto2.csproj",
         "projectName": "Punto2",
-        "projectPath": "D:\\Documents\\TdeA\\SEMESTRE 5\\Construccion\\EntregableII\\EntregableII\\Punto2\\Punto2.csproj",
+        "projectPath": "D:\\Documents\\TdeA\\SEMESTRE 5\\Construccion\\Entregable2\\Punto2\\Punto2.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\TdeA\\SEMESTRE 5\\Construccion\\EntregableII\\EntregableII\\Punto2\\obj\\",
+        "outputPath": "D:\\Documents\\TdeA\\SEMESTRE 5\\Construccion\\Entregable2\\Punto2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
